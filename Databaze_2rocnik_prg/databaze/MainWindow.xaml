@@ -1,0 +1,55 @@
+﻿<Window x:Class="databaze.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:databaze"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+    <DataGrid x:Name="dgFilmy"
+              Grid.Column="0"
+              Margin="0,0,10,0"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              SelectionMode="Single">
+        <DataGrid.Columns>
+              <DataGridTextColumn Header="Název" Binding="{Binding Nazev}" Width="*"/>
+              <DataGridTextColumn Header="Režisér" Binding="{Binding Reziser}" Width="*"/>
+              <DataGridTextColumn Header="Rok" Binding="{Binding RokVydani}" Width="70"/>
+              <DataGridTextColumn Header="Žánr" Binding="{Binding Zanr}" Width="100"/>
+              <DataGridTextColumn Header="Hodnocení" Binding="{Binding Hodnoceni}" Width="80"/>
+              <DataGridCheckBoxColumn Header="Viděno" Binding="{Binding VidelaJsem}" Width="80"/>
+        </DataGrid.Columns>
+     </DataGrid>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Evidence filmů" FontSize="18" Margin="0,0,0,10"/>
+            <TextBlock Text="Název"/>
+            <TextBox x:Name="txtNazev"/>
+            <TextBlock Text="Režisér"/>
+            <TextBox x:Name="txtReziser"/>
+            <TextBlock Text="Rok vydání"/>
+            <TextBox x:Name="txtRok"/>
+            <TextBlock Text="Žánr"/>
+            <TextBox x:Name="txtZanr"/>
+            <TextBlock Text="Hodnocení (1–10)"/>
+            <TextBox x:Name="txtHodnoceni"/>
+            
+            <CheckBox x:Name="chkVidela" Content="Viděla jsem" Margin="0,5,0,5"/>
+            
+            <Button Content="Přidat film" Click="BtnPridat_Click" Margin="0,5"/>
+            <Button Content="Načíst do formuláře" Click="BtnNacist_Click" Margin="0,5"/>
+            <Button Content="Upravit film" Click="BtnUpravit_Click" Margin="0,5"/>
+            <Button Content="Smazat film" Click="BtnSmazat_Click" Margin="0,5"/>
+            <Button Content="Vyčistit formulář" Click="BtnVymaz_Click" Margin="0,5"/>
+
+            <TextBlock Text="Hledat" Margin="10,10,0,0"/>
+            <TextBox x:Name="txtHledat" TextChanged="TxtHledat_TextChanged"/>
+        </StackPanel>
+        </Grid>
+    </Window>

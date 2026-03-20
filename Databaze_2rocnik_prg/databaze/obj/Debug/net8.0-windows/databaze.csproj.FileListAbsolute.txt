@@ -1,0 +1,4 @@
+C:\Users\61806kovtun\Source\Repos\Databaze_2rocnik_prg\databaze\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\61806kovtun\Source\Repos\Databaze_2rocnik_prg\databaze\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\61806kovtun\Source\Repos\Databaze_2rocnik_prg\databaze\obj\Debug\net8.0-windows\databaze_MarkupCompile.cache
+C:\Users\61806kovtun\Source\Repos\Databaze_2rocnik_prg\databaze\obj\Debug\net8.0-windows\databaze_MarkupCompile.lref
